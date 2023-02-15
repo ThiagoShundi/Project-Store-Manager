@@ -97,12 +97,12 @@
     "method": "POST",
     "sortNum": 0,
     "created": "2023-02-14T18:07:15.960Z",
-    "modified": "2023-02-14T20:41:40.456Z",
+    "modified": "2023-02-15T13:44:02.794Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "raw": "{\n  \"name\": \"casa\"\n}",
       "form": []
     },
     "tests": []
