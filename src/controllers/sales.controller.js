@@ -32,7 +32,7 @@ const deleteSales = async (req, res) => {
   const { id } = req.params;
   const { type, message } = await salesService.deleteById(id);
 
-  if (type) return res.status(errorMap.mapError(type)).json({ message: 'Sale not found' });
+  if (type) return res.status(errorMap.mapError(type)).json({ message });
 
   res.status(204).json(message);
 };
