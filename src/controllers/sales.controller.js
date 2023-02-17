@@ -1,20 +1,22 @@
 const { salesService } = require('../services');
 const errorMap = require('../utils/errorMap');
 
-// const listSales = async (_req, res) => {
-//   const { type, message } = await salesService.findAll();
+const listSales = async (_req, res) => {
+  const { type, message } = await salesService.findAll();
 
-//   res.status(200).json(message);
-// };
+  if (type) return res.status(errorMap.mapError(type)).json({ message: 'Sale not found' });
 
-// const getSales = async (req, res) => {
-//   const { id } = req.params;
-//   const { type, message } = await salesService.findById(id);
+  res.status(200).json(message);
+};
 
-//   if (type) return res.status(errorMap.mapError(type)).json({ message: 'Product not found' });
+const getSales = async (req, res) => {
+  const { id } = req.params;
+  const { type, message } = await salesService.findById(id);
 
-//   res.status(200).json(message);
-// };
+  if (type) return res.status(errorMap.mapError(type)).json({ message: 'Sale not found' });
+
+  res.status(200).json(message);
+};
 
 const createSales = async (req, res) => {
   const sales = [...req.body];
@@ -27,7 +29,7 @@ const createSales = async (req, res) => {
 };
 
 module.exports = {
-  // listSales,
-  // getSales,
+  listSales,
+  getSales,
   createSales,
 };

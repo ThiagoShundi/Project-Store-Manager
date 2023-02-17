@@ -1,17 +1,29 @@
 const connection = require('./connection');
 
-// const findAll = async () => {
-//   const [result] = await connection.execute(
-//     'SELECT * FROM sales',
-//   );
-//   return result; 
-// };
+const findAllSales = async () => {
+  const [result] = await connection.execute(
+    ('SELECT * FROM StoreManager.sales'),
+  
+  );  
+  return result; 
+};
+
+const findAll = async () => {
+  const [result] = await connection.execute(
+    (`SELECT saleIds.sale_id AS saleId, saleIds.product_id AS productId, 
+   saleIds.quantity AS quantity, sales.date FROM StoreManager.sales_products AS saleIds
+   INNER JOIN StoreManager.sales AS sales ON saleIds.sale_id = sales.id;`),
+  
+  );  
+  return result; 
+};
 
 const findById = async (salesId) => {
-  console.log(salesId);
-  const [[sales]] = await connection.execute(
-    'SELECT * FROM sales WHERE id = ?',
-    [salesId],
+  const [sales] = await connection.execute(
+    `SELECT sales.date, saleIds.product_id AS productId, 
+    saleIds.quantity AS quantity FROM StoreManager.sales_products AS saleIds
+    INNER JOIN StoreManager.sales AS sales ON saleIds.sale_id = sales.id
+    WHERE saleIds.sale_id = ?;`, [salesId],
   );
   return sales;
 };
@@ -36,7 +48,8 @@ const insertSalesProduct = async ({ id, sales }) => {
 };
 
 module.exports = {
-  // findAll,
+  findAllSales,
+  findAll,
   findById,
   insertSales,
   insertSalesProduct,

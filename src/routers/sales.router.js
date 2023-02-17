@@ -5,15 +5,15 @@ const { validateSales } = require('../middlewares/validateRequestSales');
 
 const router = express.Router();
 
-// router.get(
-//   '/',
-//   salesController.listSales,
-// );
+router.get(
+  '/',
+  salesController.listSales,
+);
 
-// router.get(
-//   '/:id',
-//   salesController.getSales,
-// );
+router.get(
+  '/:id',
+  salesController.getSales,
+);
 
 router.post(
   '/',
