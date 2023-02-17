@@ -338,5 +338,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "2ca21b1c-2745-4d47-804d-f1dc5d61690a",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/sales/1",
+    "url": "http://localhost:3000/sales/1",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2023-02-17T21:26:29.484Z",
+    "modified": "2023-02-17T21:26:29.484Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]

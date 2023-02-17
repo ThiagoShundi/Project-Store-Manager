@@ -46,8 +46,29 @@ const createSale = async (sales) => {
   return { type: null, message: newSale };
 };
 
+const deleteById = async (saleId) => {
+  const error = schema.validateId(saleId);
+  if (error.type) return error;
+
+  const saleIdNumb = [];
+  saleIdNumb.push(Number(saleId));
+
+  const sales = await salesModel.findAllSales();
+
+  const salesId = sales.map((sal) => sal.id);
+
+  const verifySale = salesId.some((verf) => saleIdNumb.includes(verf));
+
+  if (!verifySale) return { type: 'PRODUCT_NOT_FOUND', message: 'Sale not found' };
+
+  await salesModel.deleteById(saleId);
+
+  return { type: null, message: null };
+};
+
 module.exports = {
   findAll,
   findById,
   createSale,
+  deleteById,
 };

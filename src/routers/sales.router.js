@@ -21,4 +21,9 @@ router.post(
   salesController.createSales,
 );
 
+router.delete(
+  '/:id',
+  salesController.deleteSales,
+);
+
 module.exports = router;
