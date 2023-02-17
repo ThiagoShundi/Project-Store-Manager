@@ -8,7 +8,9 @@ const validateId = (id) => {
 };
 
 const validateNewProductString = (name) => {
+  console.log(name);
   const { error } = addProductSchemaString.validate(name);
+  console.log(error);
   if (error) {
     return { type: 'INVALID_STR', message: '"name" is required' };
   }

@@ -8,12 +8,12 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-13T21:07:26.744Z",
-    "modified": "2023-02-14T20:50:33.133Z",
+    "modified": "2023-02-17T19:06:18.963Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"ProdutoX\"\n}",
+      "raw": "{\n  \"name\": \"Martelo do XX\"\n}",
       "form": []
     },
     "tests": []
@@ -27,9 +27,14 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-13T21:35:38.174Z",
-    "modified": "2023-02-13T21:35:38.174Z",
+    "modified": "2023-02-17T18:44:01.427Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Martelo do Batman\"\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -256,6 +261,63 @@
     "modified": "2023-02-17T18:10:43.482Z",
     "headers": [],
     "params": [],
+    "tests": []
+  },
+  {
+    "_id": "064733e3-2375-4927-b6ca-40e91cb0b33d",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/1",
+    "url": "http://localhost:3000/products/1",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-02-17T18:36:46.214Z",
+    "modified": "2023-02-17T19:49:38.633Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "73ee1c16-fc84-4912-a71b-852a159680a3",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/99",
+    "url": "http://localhost:3000/products/99",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-02-17T19:30:39.698Z",
+    "modified": "2023-02-17T19:30:39.698Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "428bb673-0023-4fa6-a3a8-d95580155a0b",
+    "colId": "history",
+    "containerId": "",
+    "name": "http://localhost:3000/products/xx",
+    "url": "http://localhost:3000/products/xx",
+    "method": "PUT",
+    "sortNum": 0,
+    "created": "2023-02-17T19:44:48.315Z",
+    "modified": "2023-02-17T19:44:48.315Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"casass\"\n}",
+      "form": []
+    },
     "tests": []
   }
 ]
