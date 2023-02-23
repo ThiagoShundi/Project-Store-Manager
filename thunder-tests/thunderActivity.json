@@ -8,12 +8,12 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-13T21:07:26.744Z",
-    "modified": "2023-02-17T19:06:18.963Z",
+    "modified": "2023-02-23T19:03:39.437Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Martelo do XX\"\n}",
+      "raw": "{\n\n}",
       "form": []
     },
     "tests": []
@@ -27,12 +27,12 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-13T21:35:38.174Z",
-    "modified": "2023-02-17T18:44:01.427Z",
+    "modified": "2023-02-23T19:30:08.458Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\": \"Martelo do Batman\"\n}",
+      "raw": "{\n\n}",
       "form": []
     },
     "tests": []
@@ -216,9 +216,14 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-16T19:59:14.402Z",
-    "modified": "2023-02-16T21:29:18.912Z",
+    "modified": "2023-02-23T19:44:16.344Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\n}",
+      "form": []
+    },
     "tests": []
   },
   {
@@ -230,9 +235,14 @@
     "method": "GET",
     "sortNum": 0,
     "created": "2023-02-16T21:22:27.457Z",
-    "modified": "2023-02-16T21:22:27.457Z",
+    "modified": "2023-02-23T19:53:32.378Z",
     "headers": [],
     "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n\n}",
+      "form": []
+    },
     "tests": []
   },
   {

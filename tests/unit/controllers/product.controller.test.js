@@ -45,4 +45,8 @@ describe('Teste de integração de products', function () {
     expect(response.status).to.be.equal(200);
     expect(response.body).to.be.deep.equal(productDB[0]);
   }); 
+  
+   afterEach(function () {
+     sinon.restore();
+   });
 });
