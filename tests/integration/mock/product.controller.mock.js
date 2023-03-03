@@ -1,9 +1,4 @@
-const product = {
-  "id": 1,
-  "name": "Martelo de Thor"
-}
-
-const productsListMock = [
+const productDB = [
   {
     "id": 1,
     "name": "Martelo de Thor"
@@ -19,6 +14,5 @@ const productsListMock = [
 ]
 
 module.exports = {
-  product,
-  productsListMock,
+  productDB,
 };

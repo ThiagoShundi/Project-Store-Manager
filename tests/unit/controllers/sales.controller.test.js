@@ -5,15 +5,15 @@ const sinonChai = require('sinon-chai');
 const { expect } = chai;
 chai.use(sinonChai);
 
-const { productService } = require('../../../src/services');
-const { productController } = require('../../../src/controllers');
+const { salesService } = require('../../../src/services');
+const { salesController } = require('../../../src/controllers');
 const {
-  product,
-  productsListMock,
+  sale,
+  salesListMock,
 } = require('./mocks/product.controller.mock');
 
-describe('Teste de unidade do productController', function () {
-  describe('Listando os produtos', function () {
+describe('Teste de unidade do salesController', function () {
+  describe('Listando as vendas', function () {
     it('Deve retornar o status 200 e a lista', async function () {
       // arrange
       const res = {};
@@ -22,19 +22,19 @@ describe('Teste de unidade do productController', function () {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
       sinon
-        .stub(productService, 'findAll')
-        .resolves({ type: null, message: productsListMock });
+        .stub(salesService, 'findAll')
+        .resolves({ type: null, message: salesListMock });
 
       // act
-      await productController.listProducts(req, res);
+      await salesController.listSales(req, res);
 
       // assert
       expect(res.status).to.have.been.calledWith(200);
-      expect(res.json).to.have.been.calledWith(productsListMock);
+      expect(res.json).to.have.been.calledWith(salesListMock);
     });
   });
 
-  describe('Buscando um produto', function () {
+  describe('Buscando uma venda', function () {
     it('deve responder com 200 e os dados do banco quando existir', async function () {
       // Arrange
       const res = {};
@@ -45,15 +45,15 @@ describe('Teste de unidade do productController', function () {
       res.status = sinon.stub().returns(res);
       res.json = sinon.stub().returns();
       sinon
-        .stub(productService, 'findById')
-        .resolves({ type: null, message: product });
+        .stub(salesService, 'findById')
+        .resolves({ type: null, message: sale });
 
       // Act
-      await productController.getProducts(req, res);
+      await salesController.getSales(req, res);
 
       // Assert
       expect(res.status).to.have.been.calledWith(200);
-      expect(res.json).to.have.been.calledWith(product);
+      expect(res.json).to.have.been.calledWith(sale);
     });
   });
 
